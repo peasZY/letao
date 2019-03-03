@@ -1,0 +1,100 @@
+/* 公共样式区域 */
+// 公共颜色
+@main-color: #006699;
+
+html {
+    font-size: 26.6667vw;
+}
+//由于mui给了样式,我们需要手动更改 
+body{
+    font-size: .14rem;
+}
+// 给img取消默认的3px间距
+img{
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#header {
+    display: flex;
+    background-color: @main-color;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .left {
+        width: .45rem;
+        height: .45rem;
+    }
+
+    .content {
+        flex: 1;
+        text-align: center;
+
+        h4 {
+            color: #fff;
+            line-height: .45rem;
+        }
+    }
+
+    .right {
+        color: #fff;
+        width: .45rem;
+        height: .45rem;
+        text-align: center;
+        line-height: .45rem;
+    }
+
+}
+
+
+// footer区域
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: @main-color;
+    a{
+        color: #fff;
+        height: .45rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span{
+            line-height: 1;
+        }
+        &.active{
+            color: orange;
+        }
+    }
+}
+
+#main{
+    padding: .45rem 0;
+    height: 100vh;
+    .mui-scroll-wrapper{
+        // 把默认绝对定位改成相对定位
+        position: relative;
+        // 把这个区域滚动的盒子高度设置为100% 和main的内容一样
+        height: 100%;
+    }
+    // swiper的内容滚动样式修改 给父容器高度固定100% 子容器高度auto
+    .swiper-container {
+        height: 100%;
+
+        // 子容器的高度 为auto
+        .swiper-slide {
+            height: auto;
+        }
+    }
+
+}

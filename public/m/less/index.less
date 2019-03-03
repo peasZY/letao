@@ -1,1 +1,49 @@
-/*  */
+/* 导入base.less */
+@import './base.less';
+#main{
+    a{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+    //导航区域
+    .nav{
+        padding: .1rem;
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    // 广告区域
+    .banner{
+        padding: 0 .1rem;
+        .left{
+            a{
+                display: flex;
+                img{
+                    width: 50%;
+                    height: 1.2rem;
+                }
+            }
+        }
+        .right{
+            a{
+                display: block;
+                img{
+                    height: 2.4rem;
+                }
+            }
+        }
+    }
+
+    // 品牌区域
+    .brand,
+    .sport,
+    .woman,
+    .man{
+        padding: .1rem;
+    }
+}
