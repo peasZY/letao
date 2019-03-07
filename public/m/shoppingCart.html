@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <!-- 导入mui.css文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 导入fontAwesome字体图库的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 导入自己的css文件 -->
+    <link rel="stylesheet" href="./less/shoppingCart.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#"> <i class="fa fa-arrow-left"></i></a>
+        </div>
+        <div class="content">
+            <h4>购物车</h4>
+        </div>
+        <div class="right">
+            <a href="index.html" class="fa fa-refresh"></a>
+        </div>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <!--下拉刷新容器-->
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--数据列表-->
+                <ul class="mui-table-view ">
+                    <li class="mui-table-view-cell mui-media">
+                        <!-- mui-slider-handle 右侧显示多功能菜单 mui-navigate-right右侧添加导航箭头 -->
+                        <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+                            <!-- 商品图片 -->
+                            <div class="product-left">
+                                <img src="../mobile/images/brand1.png">
+                                <!-- 复选框 -->
+                                <div class="mui-checkbox mui-input-row mui-checkbox">
+                                    <input name="checkbox" value="Item 1" type="checkbox">
+                                </div>
+                            </div>
+                            <!-- 商品数据 -->
+                            <div class="mui-media-body product-right">
+                                <p class="product-name">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                                <div class="product-price">
+                                    <span>¥449.00</span>
+                                    <del>¥559.00</del>
+                                </div>
+                                <div class="product-params">
+                                    <div class="product-size">鞋码：<span>35</span></div>
+                                    <div class="product-num">x<span>1</span>双</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media">
+                        <!-- mui-slider-handle 右侧显示多功能菜单 mui-navigate-right右侧添加导航箭头 -->
+                        <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+                            <!-- 商品图片 -->
+                            <div class="product-left">
+                                <img src="../mobile/images/brand2.png">
+                                <!-- 复选框 -->
+                                <div class="mui-checkbox mui-input-row mui-checkbox">
+                                    <input name="checkbox" value="Item 1" type="checkbox">
+                                </div>
+                            </div>
+                            <!-- 商品数据 -->
+                            <div class="mui-media-body product-right">
+                                <p class="product-name">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                                <div class="product-price">
+                                    <span>¥449.00</span>
+                                    <del>¥559.00</del>
+                                </div>
+                                <div class="product-params">
+                                    <div class="product-size">鞋码：<span>35</span></div>
+                                    <div class="product-num">x<span>1</span>双</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media">
+                        <!-- mui-slider-handle 右侧显示多功能菜单 mui-navigate-right右侧添加导航箭头 -->
+                        <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+                            <!-- 商品图片 -->
+                            <div class="product-left">
+                                <img src="../mobile/images/brand3.png">
+                                <!-- 复选框 -->
+                                <div class="mui-checkbox mui-input-row mui-checkbox">
+                                    <input name="checkbox" value="Item 1" type="checkbox">
+                                </div>
+                            </div>
+                            <!-- 商品数据 -->
+                            <div class="mui-media-body product-right">
+                                <p class="product-name">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                                <div class="product-price">
+                                    <span>¥449.00</span>
+                                    <del>¥559.00</del>
+                                </div>
+                                <div class="product-params">
+                                    <div class="product-size">鞋码：<span>35</span></div>
+                                    <div class="product-num">x<span>1</span>双</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- 订单区域 -->
+    <section id="order">
+        <div class="order-total">
+            订单总额：¥
+            <span>0.00</span>
+        </div>
+        <button class="mui-btn mui-btn-danger" type="button">生成订单</button>
+    </section>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="shoppingCart.html" class="active">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html">
+                    <i class="fa fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 准备模板 -->
+    <script type="text/html" id="queryCartTpl">
+        {{each data value i}}
+            <li class="mui-table-view-cell mui-media">
+                <!-- mui-slider-handle 右侧显示多功能菜单 mui-navigate-right右侧添加导航箭头 -->
+                <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+                    <!-- 商品图片 -->
+                    <div class="product-left">
+                    <img src="{{value.pic[0].picAddr}}">
+                        <!-- 复选框 -->
+                        <div class="mui-checkbox mui-input-row mui-checkbox">
+                            <input name="checkbox" value="Item 1" type="checkbox">
+                        </div>
+                    </div>
+                    <!-- 商品数据 -->
+                    <div class="mui-media-body product-right">
+                        <p class="product-name">{{value.proName}}</p>
+                        <div class="product-price">
+                            <span>¥{{value.price}}</span>
+                            <del>¥{{value.oldPrice}}</del>
+                        </div>
+                        <div class="product-params">
+                            <div class="product-size">鞋码：<span>{{value.size}}</span></div>
+                            <div class="product-num">x<span>{{value.num}}</span>双</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- right默认隐藏的按钮 mui-slider-right 默认隐藏 滑动的时候会显示出来的类名 -->
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-blue btn-edit">编辑</a>
+                    <a class="mui-btn mui-btn-red btn-delete" data-id="{{value.id}}">删除</a>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+    <!-- 导入mui.js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 导入zepto.js文件 获取元素,发送请求 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 导入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="./js/shoppingCart.js"></script>
+</body>
+
+</html>

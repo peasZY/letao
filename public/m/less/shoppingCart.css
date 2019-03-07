@@ -97,3 +97,64 @@ h6 {
 #main .swiper-container .swiper-slide {
   height: auto;
 }
+#main {
+  padding-bottom: .8rem;
+}
+#main li a {
+  display: flex;
+}
+#main li a .product-left {
+  width: 25%;
+  position: relative;
+  text-align: center;
+}
+#main li a .product-left img {
+  width: .8rem;
+  height: .8rem;
+  display: block;
+}
+#main li a .product-left .mui-checkbox input {
+  position: static;
+}
+#main li a .product-left .mui-checkbox input::before {
+  font-size: .2rem;
+  color: hotpink;
+}
+#main li a .product-right {
+  width: 75%;
+}
+#main li a .product-right .product-name {
+  white-space: normal;
+  color: #666666;
+}
+#main li a .product-right .product-price {
+  padding: .08rem 0;
+}
+#main li a .product-right .product-price span {
+  color: red;
+  font-weight: 600;
+}
+#main li a .product-right .product-price del {
+  color: #999;
+}
+#main li a .product-right .product-params {
+  display: flex;
+  justify-content: space-between;
+}
+#order {
+  background-color: #eee;
+  position: fixed;
+  width: 100%;
+  bottom: .45rem;
+  left: 0;
+  z-index: 3;
+  height: 0.35rem;
+  line-height: .35rem;
+  display: flex;
+  padding-left: .2rem;
+  justify-content: space-between;
+}
+#order .order-total {
+  color: red;
+  font-weight: 600;
+}

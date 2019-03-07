@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索页面</title>
+    <!-- 导入mui.css文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 导入fontAwesome字体图库的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 导入自己的css文件 -->
+    <link rel="stylesheet" href="./less/search.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#"> <i class="fa fa-arrow-left"></i></a>
+        </div>
+        <div class="content">
+            <h4>搜索中心</h4>
+        </div>
+        <div class="right">
+            <!-- <a href="search.html" class="fa fa-search"></a> -->
+        </div>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <div class="search-form">
+                    <form action="">
+                        <input type="search" placeholder="请输入要搜索的商品">
+                        <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+                    </form>
+                </div>
+                <div class="search-history">
+                    <div class="title">
+                        <span>搜索历史</span>
+                        <a href="#"><i class="fa fa-trash"></i>清空记录</a>
+                    </div>
+                    <div class="content">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">Item 1
+                                <span class="mui-badge">
+                                    <i class="fa fa-close"></i>
+                                </span>
+                            </li>
+                            <li class="mui-table-view-cell">Item 2
+                                <span class="mui-badge">
+                                    <i class="fa fa-close"></i>
+                                </span>
+                            </li>
+                            <li class="mui-table-view-cell">Item 3
+                                <span class="mui-badge">
+                                    <i class="fa fa-close"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="mui-card"> -->
+                    <!--页眉，放置标题-->
+                    <!-- <div class="mui-card-header">页眉</div> -->
+                    <!--内容区-->
+                    <!-- <div class="mui-card-content">内容区</div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="active">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="shoppingCart.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html">
+                    <i class="fa fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- 准备模板 -->
+    <script type="text/html" id="searchHistoryTpl">
+        {{if list.length > 0}}
+            {{each list value i}}
+                <li class="mui-table-view-cell" data-value="{{value.key}}">{{value.key}}
+                    <span class="mui-badge">
+                        <!-- i代表索引,便于点击删除 -->
+                        <i class="fa fa-close" data-index="{{i}}"></i>
+                    </span>
+                </li>
+            {{/each}}
+        {{else}}
+            <li class="mui-table-view-cell">{{value.key}}
+                您当前还没有搜索记录哦~
+            </li>
+        {{/if}}
+    </script>
+
+    <!-- 导入mui.js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 导入zepto.js文件 获取元素,发送请求 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 导入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="./js/search.js"></script>
+</body>
+
+</html>

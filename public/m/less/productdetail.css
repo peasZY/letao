@@ -97,3 +97,50 @@ h6 {
 #main .swiper-container .swiper-slide {
   height: auto;
 }
+#footer {
+  background-color: #ccc;
+}
+#footer .fa-shopping-cart {
+  color: #666;
+  font-size: 22px;
+}
+#footer .btn {
+  padding: .05rem;
+}
+#footer .btn .mui-btn {
+  width: 100%;
+}
+#main {
+  background-color: #fff;
+}
+#main .mui-indicator {
+  background-color: green;
+}
+#main .mui-indicator.mui-active {
+  background-color: red;
+}
+#main .productInfo > div {
+  border-bottom: 1px solid #ccc;
+}
+#main .productInfo .product-name {
+  padding: .1rem;
+}
+#main .productInfo .product-name span {
+  font-weight: 600;
+}
+#main .productInfo .product-price {
+  padding: .1rem;
+}
+#main .productInfo .product-price span {
+  color: red;
+  font-weight: 600;
+}
+#main .productInfo .product-size {
+  padding: .1rem .1rem .05rem;
+}
+#main .productInfo .product-size button {
+  margin-bottom: .05rem;
+}
+#main .productInfo .product-num {
+  padding: .1rem;
+}

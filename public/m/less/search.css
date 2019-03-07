@@ -97,3 +97,49 @@ h6 {
 #main .swiper-container .swiper-slide {
   height: auto;
 }
+#main {
+  background-color: #fff;
+}
+#main .search-form {
+  padding: .1rem;
+}
+#main .search-form form {
+  display: flex;
+}
+#main .search-form form input {
+  flex: 1;
+  height: .36rem;
+  background-color: #fff;
+  border: 1px solid #006699;
+  text-align: left;
+  font-size: .14rem;
+  border-radius: .06rem 0 0 .06rem;
+}
+#main .search-form form .btn-search {
+  border: 1px solid #006699;
+  width: .6rem;
+  height: .36rem;
+  background-color: #006699;
+  border-radius: 0 .06rem .06rem 0;
+}
+#main .search-history {
+  padding: .1rem;
+}
+#main .search-history .title {
+  padding: .1rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 2px #666;
+  border-radius: .06rem .06rem 0 0 ;
+  font-size: .14rem;
+}
+#main .search-history .title a {
+  color: #333;
+}
+#main .search-history .content {
+  border-radius: 0 0 .06rem .06rem;
+  box-shadow: 0px 0px 2px #666;
+}
+#main .search-history .content .mui-table-view-cell:after {
+  left: 0;
+}

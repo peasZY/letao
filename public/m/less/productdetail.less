@@ -1,0 +1,53 @@
+@import 'base.less';
+#footer{
+    background-color: #ccc;
+    .fa-shopping-cart{
+        color: #666;
+        font-size: 22px;
+    }
+    .btn{
+        padding: .05rem;
+        .mui-btn{
+            width: 100%;
+        }
+    }
+    
+}
+
+#main{
+    background-color: #fff;
+    .mui-indicator{
+        background-color: green;
+        &.mui-active{
+            background-color: red;
+        }
+    }
+    
+    .productInfo{
+        >div{
+            border-bottom: 1px solid #ccc;
+        }
+        .product-name{
+            padding: .1rem;
+            span{
+                font-weight: 600;
+            }
+        }
+        .product-price{
+            padding: .1rem;
+            span{
+                color: red;
+                font-weight: 600;
+            }
+        }
+        .product-size{
+            padding: .1rem .1rem .05rem;
+            button{
+                margin-bottom: .05rem;
+            } 
+        }
+        .product-num{
+            padding: .1rem;
+        }
+    }
+}

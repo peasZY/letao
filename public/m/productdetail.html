@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <!-- 导入mui.css文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 导入fontAwesome字体图库的css文件 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 导入自己的css文件 -->
+    <link rel="stylesheet" href="./less/productdetail.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#"> <i class="fa fa-arrow-left"></i></a>
+        </div>
+        <div class="content">
+            <h4>商品详情</h4>
+        </div>
+        <div class="right">
+            <a href="index.html" class="fa fa-home"></a>
+        </div>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <!-- mui轮播图 -->
+                <section class="mui-slider">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner4.png" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner1.png" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner2.png" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner3.png" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner4.png" /></a></div>
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.png" /></a></div>
+                    </div>
+                    <!-- 轮播图上面的小圆点,有几张图片要写几个小圆点 -->
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </section>
+                <!-- 商品详情 -->
+                <section class="productInfo">
+                    <div class="product-name">
+                        名称：<span>李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</span>
+                    </div>
+                    <div class="product-price">
+                        价格：<span>¥299</span>
+                        <del>¥339</del>
+                    </div>
+                    <div class="product-size">
+                        尺码：
+                        <button type="button" class="mui-btn mui-btn-warning">34</button>
+                        <button type="button" class="mui-btn">35</button>
+                        <button type="button" class="mui-btn">36</button>
+                        <button type="button" class="mui-btn">36</button>
+                        <button type="button" class="mui-btn">36</button>
+                        <button type="button" class="mui-btn">36</button>
+                        <button type="button" class="mui-btn">36</button>
+                        <button type="button" class="mui-btn">36</button>
+                        <button type="button" class="mui-btn">36</button>
+                        <button type="button" class="mui-btn">36</button>
+                    </div>
+                    <div class="product-num">
+                        数量：
+                        <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='100'>
+                            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                            <input class="mui-numbox-input" type="number" />
+                            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                        </div>
+                        剩余：22件
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-2">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </div>
+            <div class="mui-col-xs-5 btn">
+                <button type="button" class="mui-btn mui-btn-danger add-cart">加入购物车</button>
+            </div>
+            <div class="mui-col-xs-5 btn">
+                <button type="button" class="mui-btn mui-btn-warning ">立即购买</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 准备模板 -->
+    <script type="text/html" id="productDetailTpl">
+        <!-- mui轮播图 -->
+        <section class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                                                                            <!-- 传入最后一张图片的路径 -->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[pic.length-1].picAddr}}" /></a></div>
+                {{each pic value i}}
+                <div class="mui-slider-item"><a href="#"><img src="{{value.picAddr}}" /></a></div>
+                {{/each}}
+                <!--支持循环，需要重复图片节点-->                               <!-- 传入第一张图片的路径 -->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[0].picAddr}}" /></a></div>
+            </div>
+            <!-- 轮播图上面的小圆点,有几张图片要写几个小圆点 -->
+            <div class="mui-slider-indicator">
+                {{each pic value i}}
+                <!-- 判断如果i == 0 返回 mui-active 否则返回空 -->
+                <div class="mui-indicator {{i == 0 ? 'mui-active' : ''}}"></div>
+                {{/each}} 
+            </div>
+        </section>
+        <!-- 商品详情 -->
+        <section class="productInfo">
+            <div class="product-name">
+                名称：<span>{{proName}}</span>
+            </div>
+            <div class="product-price">
+                价格：<span>¥{{price}}</span>
+                <del>¥{{oldPrice}}</del>
+            </div>
+            <div class="product-size">
+                尺码：
+                {{each size value i}}
+                <button type="button" class="btn-size mui-btn" data-size="{{value}}">{{value}}</button>
+                {{/each}}
+            </div>
+            <div class="product-num">
+                数量：
+                <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+                    <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                    <input class="mui-numbox-input" type="number" />
+                    <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                </div>
+                剩余：{{num}}件
+            </div>
+        </section>     
+    </script>
+
+    <!-- 导入mui.js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 导入zepto.js文件 获取元素,发送请求 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 导入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="./js/productdetail.js"></script>
+</body>
+
+</html>

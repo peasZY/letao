@@ -97,3 +97,53 @@ h6 {
 #main .swiper-container .swiper-slide {
   height: auto;
 }
+#main .search-form {
+  padding: .1rem;
+}
+#main .search-form form {
+  display: flex;
+}
+#main .search-form form input {
+  flex: 1;
+  height: .36rem;
+  background-color: #fff;
+  border: 1px solid #006699;
+  text-align: left;
+  font-size: .14rem;
+  border-radius: .06rem 0 0 .06rem;
+}
+#main .search-form form .btn-search {
+  border: 1px solid #006699;
+  width: .6rem;
+  height: .36rem;
+  background-color: #006699;
+  border-radius: 0 .06rem .06rem 0;
+}
+#main .products-list .mui-card-header a {
+  color: #666;
+  font-size: .14rem;
+  text-align: center;
+}
+#main .products-list .mui-card-header a.active {
+  color: red;
+}
+#main .products-list .mui-card-content .mui-col-xs-6 {
+  box-shadow: 0 1px 0 #ccc;
+}
+#main .products-list .mui-card-content .mui-col-xs-6:nth-child(odd) {
+  box-shadow: 1px 1px 0 #ccc;
+}
+#main .products-list .mui-card-content .product {
+  text-align: center;
+  padding: .05rem;
+}
+#main .products-list .mui-card-content .product img {
+  width: 100%;
+}
+#main .products-list .mui-card-content .product .product-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
